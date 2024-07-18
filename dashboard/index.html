@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+   
+  </head>
+  <body>
+    <style>
+      
+      .profile-sidebar {
+        position: fixed;
+        top: 0;
+        right: -300px; /* initially off-screen */
+        width: 300px;
+        height: 100%;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        transition: right 0.3s ease;
+        z-index: 1000;
+        backdrop-filter: blur(20px) !important;
+      }
+      .profile-sidebar.open {
+        right: 0;
+      }
+      .profile-sidebar-content {
+        padding: 20px;
+      }
+    </style>
+  
+   
+    
+    <nav class="bg-white border-gray-200 dark:bg-gray-900">
+      <div
+        class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4"
+      >
+        <img src="https://th.bing.com/th/id/OIP.gs0p3lzK0XsGb8GTJI8XZgHaDn?rs=1&pid=ImgDetMain" class="h-8" alt="Event-Planner" />
+        <span>
+          <button
+          id="profile_toggle_btn"
+          class="text-sm text-gray-500 dark:text-white hover:underline focus:outline-none"
+          >
+          <img
+          style="display: none"
+          class="w-10 h-11 p-1 rounded-full ring-2 ring-gray-300 dark:ring-gray-500"
+          src="#"
+          id="user_img"
+          />
+          <h1
+          id="user_name"
+          href="tel:5541251234"
+          class="text-sm text-gray-500 dark:text-white hover:underline"
+          >User Name</h1>
+        </button>
+        
+        <div class="flex items-center space-x-6 rtl:space-x-reverse">
+          
+        </div>
+      </div>
+    </nav>
+
+    
+    <nav class="bg-gray-50 dark:bg-gray-700">
+      <div class="max-w-screen-xl px-4 py-3 mx-auto">
+        <div class="flex items-center">
+          
+        </div>
+      </div>
+    </nav>
+
+    
+    <div id="profile_sidebar" class="profile-sidebar">
+      <div class="profile-sidebar-content">
+        <h2 class="text-xl font-semibold mb-4">Settings</h2>
+        
+        <ul>
+          <li>
+            <button
+              class="bg-gray-200 hover:bg-gray-300 text-gray-700 font-semibold py-2 px-4 rounded-full mt-4"
+            >
+              <a
+                href="./create-event/index.html"
+                class="text-gray-900 dark:text-white hover:underline"
+                >Create Event</a
+              >
+            </button>
+          </li>
+          <li>
+            <button
+              class="bg-gray-200 hover:bg-gray-300 text-gray-700 font-semibold py-2 px-4 rounded-full mt-4"
+            >
+              <a
+                href="../my-events/index.html"
+                class="text-gray-900 dark:text-white hover:underline"
+                >My-Events</a
+              >
+            </button>
+          </li>
+        </ul>
+        
+        
+        <button
+          id="profile_cancel_btn"
+          class="bg-gray-200 hover:bg-gray-300 text-gray-700 font-semibold py-2 px-4 rounded-full mt-4"
+        >
+          Cancel
+        </button>
+        <button
+          id="logout_btn"
+          class="bg-gray-200 hover:bg-gray-300 text-gray-700 font-semibold py-2 px-4 rounded-full mt-4"
+        >
+          <a
+            href="#"
+            class="text-sm text-blue-600 dark:text-blue-500 hover:underline"
+            >LogOut</a
+          >
+        </button>
+      </div>
+    </div>
+
+    
+    <div class="card1">
+      <div class="card2">
+        <div id="events_cards_container" class="cards">
+          
+         </div>
+      </div>
+    </div>
+    
+
+    
+    <script>
+      
+      const profileSidebar = document.getElementById("profile_sidebar");
+      const profileToggleBtn = document.getElementById("profile_toggle_btn");
+      const profileCancelBtn = document.getElementById("profile_cancel_btn");
+
+      
+      profileToggleBtn.addEventListener("click", () => {
+        profileSidebar.classList.add("open");
+      });
+
+  
+      profileCancelBtn.addEventListener("click", () => {
+        profileSidebar.classList.remove("open");
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
+
+

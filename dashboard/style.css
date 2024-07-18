@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.shadow,
+.shadow-lg {
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  margin-top: 27px;
+}
+.shadow:hover {
+  border-color: rgb(0, 0, 0);
+  box-shadow: 0 0 30px rgb(0, 0, 0);
+}
+.shadow-lg:hover {
+  border-color: rgb(0, 0, 0);
+  box-shadow: 0 0 30px rgb(0, 0, 0);
+}
+.flex a {
+  color: inherit;
+  text-decoration: inherit;
+  margin-left: 164px;
+}
+
+.favorite-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.favorite-button:hover {
+  background-color: #f0f0f0;
+  border-color: #999999;
+}
+
+.heart-icon {
+  width: 20px;
+  height: 20px;
+  fill: red; /* Change the color of the heart here */
+  margin-right: 5px;
+}
+.h-8 {
+  height: 4rem !important;
+  border-radius: 50px !important;
+}
+.text-gray-500 {
+  --tw-text-opacity: 1 !important;
+  color: rgb(12 12 12) !important;
+}
+.profile-sidebar {
+  position: fixed;
+  top: 0;
+  right: -300px; /* initially off-screen */
+  width: 300px;
+  height: 100%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  transition: right 0.3s ease;
+  z-index: 1000;
+}
+
+.profile-sidebar-content {
+  padding: 20px;
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.card1 {
+  gap: -15px;
+  display: flex;
+  padding: 8vh;
+  backdrop-filter: blur(20px) !important;
+}
+.card2 {
+  display: flex;
+  align-items: center;
+  border: 2px solid rgb(255, 255, 255);
+  justify-content: center;
+  padding: 8vh;
+  backdrop-filter: blur(20px) !important;
+  border-radius: 50px;
+}
+.card2:hover{
+ 
+  box-shadow: 0 0 20px rgb(241, 236, 236);
+  border: 2px solid rgb(255, 244, 244);
+}
+.max-w-sm {
+  width: 100%;
+}
+.profile-sidebar.open {
+  right: 0 !important;
+  backdrop-filter: blur(20px) !important;
+}
+body {
+ background-image: url(https://th.bing.com/th/id/R.8c9e27cba947e90ef09fb3e26a62edd2?rik=9qMarD6%2fGPXrgQ&pid=ImgRaw&r=0);
+ background-size: cover;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.p-4 {
+  backdrop-filter: blur(20px) !important;
+
+}
+.py-3 {
+  backdrop-filter: blur(20px) !important;
+}
+.bg-white{
+  background: none;
+  backdrop-filter: blur(20px) !important;
+  
+}

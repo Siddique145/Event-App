@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.shadow,
+.shadow-lg {
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  margin-top: 27px;
+}
+.shadow:hover {
+  border-color: rgb(0, 0, 0);
+  box-shadow: 0 0 30px rgb(0, 0, 0);
+}
+.shadow-lg:hover {
+  border-color: rgb(0, 0, 0);
+  box-shadow: 0 0 30px rgb(0, 0, 0);
+}
+.flex a {
+  color: inherit;
+  text-decoration: inherit;
+  margin-left: 164px;
+}
+
+.favorite-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.favorite-button:hover {
+  background-color: #f0f0f0;
+  border-color: #999999;
+}
+
+.heart-icon {
+  width: 20px;
+  height: 20px;
+  fill: red; /* Change the color of the heart here */
+  margin-right: 5px;
+}
+.profile-sidebar.open {
+  right: 0 !important;
+  backdrop-filter: blur(20px) !important;
+}
+body {
+  min-height: 100vh;
+  background-image: url(https://th.bing.com/th/id/R.8c9e27cba947e90ef09fb3e26a62edd2?rik=9qMarD6%2fGPXrgQ&pid=ImgRaw&r=0);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.p-4 {
+  
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-bottom: 2px solid black;
+}
+.py-3 {
+ background-color: #afaaaa;
+}
+.bg-white {
+  
+}
+

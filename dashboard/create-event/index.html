@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create-Event</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    
+
+    <div class="container">
+      <h1>Create an Event</h1>
+      <form id="create_event_form">
+        <label for="event-name">Event-Pic</label>
+        <input type="file" id="event-img" name="event-name" required />
+
+        <label for="event-name">Event Name:</label>
+        <input type="text" id="event-name" name="event-name" required />
+
+        <label for="event-date">Event Date:</label>
+        <input type="date" id="event-date" name="event-date" required />
+
+        <label for="event-time">Event Time:</label>
+        <input type="time" id="event-time" name="event-time" required />
+
+        <label for="event-location">Event Location:</label>
+        <input type="text" id="event-location" name="event-location" required />
+
+        <label for="event-description">Event Description:</label>
+        <textarea
+          id="event-description"
+          name="event-description"
+          required
+        ></textarea>
+
+        <label for="event-category">Event Category:</label>
+        <select id="event-category" name="event-category" required>
+          <option value="">Select a category</option>
+          <option value="music">Music</option>
+          <option value="music">Education</option>
+          <option value="art">Art</option>
+          <option value="food">Food</option>
+          <option value="sports">Sports</option>
+          <option value="other">Other</option>
+        </select>
+
+        <button type="submit" id="create_event_btn">Create Event</button>
+        <buttons style="margin-top: 10px; border-radius: 5px; " type="button" id="cancel-btn">Cancel</button>
+      </form>
+    </div>
+
+    <script type="module" src="./app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/json2/20160511/json2.min.js" integrity="sha512-uWk2ZXl3GVrq6DZsrL5dSg1S/F3MNQ9VaDFigqXOoKUnWG58UxOuJGfTrzh5KjpoBvPiFniL2PahU2HUTFMJXw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </body>
+</html>

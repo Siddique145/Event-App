@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(https://img.freepik.com/free-vector/science-atom-background-vector-gradient-blue-education-remix_53876-114102.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    
+    padding: 50px;
+}
+.main1 h1{
+    text-align: center;
+    font-size: xx-large;
+    font-weight: 800;
+}
+.main1{
+    backdrop-filter: blur(20px); /* Adjust the blur radius as needed */
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 10px;
+}
+.main1:hover{
+    
+    border-color: rgb(0, 0, 0);
+    box-shadow: 0 0 30px rgb(0, 0, 0);
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
+}
+.text-white{
+    background-color: black !important;
+    font-weight: 700 Im !important;
+    font-size: x-large !important;
+}
+.text-white:hover{
+    background-color: rgb(48, 48, 48)!important;
+}
+.text-gray-500 {
+    --tw-text-opacity: 1 !important; 
+    color: rgb(255 255 255) !important;
+    font-weight: 600 !important;
+}
+
+.text-gray-900 {
+    --tw-text-opacity: 1 !important;
+    color: rgb(221 222 225) !important;
+    font-size: larger;
+    font-weight: 600;
+}
+[type=file] {
+    background: unset;
+    border-color: inherit;
+    border-radius: 0;
+    border-width: 0;
+    font-size: unset;
+    line-height: inherit;
+    padding: 0;
+    color: white;
+}

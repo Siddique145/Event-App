@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(https://equatorcorporation.com/wp-content/uploads/2019/01/AdobeStock_114200048-1024x683.jpeg);
+    background-size: cover;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    height: 100%;
+    padding: 50px;
+}
+.main1 h1{
+    text-align: center;
+    font-size: xx-large;
+    font-weight: 800;
+}
+.main1{
+    backdrop-filter: blur(20px);
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    padding: 64px;
+}
+.main1:hover{
+    
+    border-color: rgb(0, 0, 0);
+    box-shadow: 0 0 30px rgb(0, 0, 0);
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
+}
+.text-white{
+    background-color: black !important;
+    grid-column: 10px;
+}
+.text-white:hover{
+    background-color: rgb(48, 48, 48)!important;
+}
+.text-gray-500 {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255);
+}
+
