@@ -19,7 +19,11 @@ const logout_btn = document.getElementById("logout_btn");
 const user_img = document.getElementById("user_img");
 const user_name = document.getElementById("user_name");
 const user_email = document.getElementById("user");
-const events_cards_container = document.getElementById("events_cards_container");
+const events_cards_container = document.getElementById(
+  "events_cards_container"
+);
+const not_logged = document.getElementById("not_logged");
+const bigdiv = document.getElementById("bigdiv");
 
 onAuthStateChanged(auth, (user) => {
   if (user) {
@@ -27,7 +31,36 @@ onAuthStateChanged(auth, (user) => {
     getUserInfo(uid);
     user_img.style.display = "inline-block";
   } else {
-    window.location.href = "../login/index.html";
+    //window.location.href = "../login/index.html";
+    bigdiv.innerText = "";
+    bigdiv.innerHTML = `    <nav class="bg-white border-gray-200 dark:bg-gray-900">
+      <div
+        class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4"
+      >
+        <img src="https://th.bing.com/th/id/OIP.gs0p3lzK0XsGb8GTJI8XZgHaDn?rs=1&pid=ImgDetMain" class="h-8" alt="Event-Planner" />
+        <span>
+          <button
+          id="profile_toggle_btn"
+          class="text-sm text-gray-500 dark:text-white hover:underline focus:outline-none"
+          >
+          <img
+          style="display: none"
+          class="w-10 h-11 p-1 rounded-full ring-2 ring-gray-300 dark:ring-gray-500"
+          src="#"
+          id="user_img"
+          />
+          <h1
+          id="user_name"
+          href="tel:5541251234"
+          class="text-sm text-gray-500 dark:text-white hover:underline"
+          ><a href="../login/index.html">Login</a></h1>
+
+        </button>
+        
+        <div class="flex items-center space-x-6 rtl:space-x-reverse">
+       
+    
+`;
   }
 });
 
@@ -88,7 +121,9 @@ async function getAllEvents() {
             <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
               Description : <br> ${description}
             </p>
-            <button id="${doc.id}" class="favorite-button" onclick="playLikeSound(this)">
+            <button id="${
+              doc.id
+            }" class="favorite-button" onclick="playLikeSound(this)">
               <audio id="like-sound">
                 <source src="./soundeffect.mp3" type="audio/mpeg">
                 Your browser does not support the audio element.
@@ -96,16 +131,21 @@ async function getAllEvents() {
               <svg class="heart-icon" viewBox="0 0 24 24">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
               </svg>
-              ${auth?.currentUser && event?.playLikeSound?.includes(auth?.currentUser.uid)? "Liked..." : "Like"}
               ${
-                event?.playLikeSound?.length? event?.playLikeSound?.length :''
+                auth?.currentUser &&
+                event?.playLikeSound?.includes(auth?.currentUser.uid)
+                  ? "Liked..."
+                  : "Like"
+              }
+              ${
+                event?.playLikeSound?.length ? event?.playLikeSound?.length : ""
               }
             </button>
           </div>
         </div>
       `;
       events_cards_container.innerHTML += card;
-      window.playLikeSound = playLikeSound
+      window.playLikeSound = playLikeSound;
     });
   } catch (err) {
     alert(err);
@@ -144,35 +184,39 @@ if(e.innerText == 'Liked...'){
   audio.play();
 }*/
 async function playLikeSound(e) {
-  console.log((e.innerText))
-  console.log("play btn=>", e)
+  console.log(e.innerText);
+  console.log("play btn=>", e);
   var audio = document.getElementById("like-sound");
   audio.currentTime = 0; // Reset audio to start
 
   // Wait for the audio to be loaded
-  audio.addEventListener('canplaythrough', function() {
+  audio.addEventListener("canplaythrough", function () {
     audio.play();
   });
 
   if (auth.currentUser) {
     e.disabled = true;
-    const docRef = doc(db, "events", e.id)
-    if (e.innerText == 'Liked...') {
+    const docRef = doc(db, "events", e.id);
+    if (e.innerText == "Liked...") {
       updateDoc(docRef, {
         playLikeSound: arrayRemove(auth.currentUser.uid),
-      }).then(() => {
-        e.disabled = false;
-        e.innerText = 'Like'
-      }).catch((err) => console.log(err))
+      })
+        .then(() => {
+          e.disabled = false;
+          e.innerText = "Like";
+        })
+        .catch((err) => console.log(err));
     } else {
       updateDoc(docRef, {
         playLikeSound: arrayUnion(auth.currentUser.uid),
-      }).then(() => {
-        e.disabled = false;
-        e.innerText = 'Liked...'
-      }).catch((err) => console.log(err))
+      })
+        .then(() => {
+          e.disabled = false;
+          e.innerText = "Liked...";
+        })
+        .catch((err) => console.log(err));
     }
   } else {
-    //window.location.href = 
+    //window.location.href =
   }
 }
