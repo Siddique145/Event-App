@@ -13,7 +13,7 @@ import {
   updateDoc,
   arrayUnion,
   arrayRemove,
-} from "../firebase-js/firebaseapp.js";
+} from "./firebase-js/firebaseapp.js";
 
 const logout_btn = document.getElementById("logout_btn");
 const user_img = document.getElementById("user_img");
