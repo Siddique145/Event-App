@@ -27,7 +27,7 @@ import {
       getUserInfo(uid);
       user_img.style.display = "inline-block";
     } else {
-      //window.location.href = "../login/index.html";
+      window.location.href = "./dashboard/index.html";
       getAllEvents()
     }
   });
