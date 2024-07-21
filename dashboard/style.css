@@ -80,6 +80,7 @@
   padding: 8vh;
   backdrop-filter: blur(20px) !important;
 }
+
 .card2 {
   display: flex;
   align-items: center;
@@ -89,8 +90,7 @@
   backdrop-filter: blur(20px) !important;
   border-radius: 50px;
 }
-.card2:hover{
- 
+.card2:hover {
   box-shadow: 0 0 20px rgb(241, 236, 236);
   border: 2px solid rgb(255, 244, 244);
 }
@@ -102,21 +102,47 @@
   backdrop-filter: blur(20px) !important;
 }
 body {
- background-image: url(https://th.bing.com/th/id/R.8c9e27cba947e90ef09fb3e26a62edd2?rik=9qMarD6%2fGPXrgQ&pid=ImgRaw&r=0);
- background-size: cover;
+  background-image: url(https://th.bing.com/th/id/R.8c9e27cba947e90ef09fb3e26a62edd2?rik=9qMarD6%2fGPXrgQ&pid=ImgRaw&r=0);
+  background-size: cover;
 
   background-repeat: no-repeat;
   background-size: cover;
 }
 .p-4 {
   backdrop-filter: blur(20px) !important;
-
 }
 .py-3 {
   backdrop-filter: blur(20px) !important;
 }
-.bg-white{
+.bg-white {
   background: none;
   backdrop-filter: blur(20px) !important;
+}
+@media only screen and (max-width: 400px) {
+  
+  body {
+    width: fit-content;
+    }
+    :host,
+    html {
+      width: fit-content;
+    }
+  .card1{
+    width: fit-content;
+    padding: 0;
+  }
+  .card2{
+    max-width:  fit-content;
+    align-items: center;
+    border: 2px solid rgb(255, 255, 255);
+    justify-content: center;
+    backdrop-filter: blur(20px) !important;
+    border-radius: 50px;
+    padding: 0;
+  }
+  .cards{
+    padding: 30px;
+    padding-bottom: 20px;
+  }
   
 }
