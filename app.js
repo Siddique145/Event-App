@@ -28,6 +28,7 @@ import {
       user_img.style.display = "inline-block";
     } else {
       //window.location.href = "../login/index.html";
+      getAllEvents()
     }
   });
   

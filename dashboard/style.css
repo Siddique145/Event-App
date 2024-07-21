@@ -89,6 +89,7 @@
   padding: 8vh;
   backdrop-filter: blur(20px) !important;
   border-radius: 50px;
+  width: fit-content;
 }
 .card2:hover {
   box-shadow: 0 0 20px rgb(241, 236, 236);
