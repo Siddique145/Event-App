@@ -113,7 +113,7 @@ import {
     }
   }
   
-  //getAllEvents();
+  getAllEvents();
   /*
   async function playLikeSound(e){
     console.log((e.innerText))
